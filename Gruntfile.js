@@ -27,7 +27,7 @@ module.exports = function(grunt) {
   // load all grunt custom tasks
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('default', ['jshint:with_overrides', 'clean:build', 'copy', 'concat', 'uglify:buildall', 'less:production', 'jade:release', 'imagemin:dynamic', 'watch']);
+  grunt.registerTask('default', ['jshint:with_overrides', 'clean:build', 'copy', 'concat', 'uglify:buildall', 'less:production', 'jade:release', 'imagemin:dynamic', 'connect','watch']);
 };
 
 function loadConfig(configPath) {

@@ -1,4 +1,4 @@
-/*! DoMyNet 0.1.0 2014-09-24 */
+/*! DoMyNet 0.1.0 2014-09-26 */
 define('a', [], function(require, exports, module) {
 
   // 通过 require 引入依赖
