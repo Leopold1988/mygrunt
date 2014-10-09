@@ -3,14 +3,22 @@
   <meta charset="utf-8">
   <meta name="copyright" content="">
   <meta name="revisit-after" content="1 days">
-  <meta name="author" content="Leopold,zhangxin">
+  <meta name="author" content="Leopold">
   <title>这是一个demo</title>
-  <script src="../../seajs/jquery-1.11.1.js"></script>
+  <link rel="stylesheet" href="../../dist/css/style.css">
+  <script src="../../dist/js/jquery/jquery-1.11.1.js"></script>
   <script src="../../seajs/sea.js"></script>
   <script src="../../seajs/seajs-preload.js"></script>
-  <script src="../../seajs/config.js"></script>
+  <script src="../../dist/js/config.js"></script>
 </head>
 <body>
+  <script>
+    $(function(){
+      $('div.a').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        alert("over");
+      });
+    });
+  </script>
   <div class="a">aaa</div>
   <p>cccc</p>
 </body>

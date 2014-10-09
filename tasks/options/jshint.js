@@ -1,20 +1,17 @@
 module.exports = exports = {
   options: {
-    curly: true,
-    eqeqeq: true,
-    eqnull: true,
-    browser: true,
+    curly: true,    // 检测花括号
+    eqeqeq: true,   // 检测==和===
     globals: {
       jQuery: true
     }
   },
-  with_overrides: {
+  default: {
     options: {
-      curly: false,
-      undef: true,
+      undef: false
     },
     files: {
-      src: ['src/js/**']
+      src: ['<%= src %>/app/*.js', '<%= src %>/model/*.js', 'gruntfile.js', 'tasks/options/*.js']
     }
   }
 };

@@ -1,5 +1,11 @@
 extends model/main
 
 block page-body
+  script.
+    $(function(){
+      $('div.a').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+        alert("over");
+      });
+    });
   div.a aaa
   p cccc

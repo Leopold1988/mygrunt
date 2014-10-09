@@ -1,13 +1,13 @@
 module.exports = exports = {
-  release: {
+  default: {
     options: {
       pretty : true
     },
     files: [{
       expand:true,
-      cwd:"src/jade",
+      cwd:"<%= src %>/jade",
       src:['*.jade', '**/*.jade', '!model/*.jade', '!variables/*.jade'],
-      dest:'dist/html',
+      dest:'<%= dist %>/html',
       ext: '.html'
     }]
   }
