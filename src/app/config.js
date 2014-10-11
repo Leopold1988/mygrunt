@@ -7,7 +7,8 @@ seajs.config({
 
   // 路径配置
   paths: {
-    'js': '../js'
+    'js': '../js',
+    'model': '../model'
   },
 
   // 变量配置

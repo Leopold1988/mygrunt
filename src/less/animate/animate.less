@@ -5,6 +5,15 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 Copyright (c) 2014 Daniel Eden
 */
 
+/*
+当运动结束时：
+$(function(){
+  $('div.a').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    alert("over");
+  });
+})
+;*/
+
 .animated {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;

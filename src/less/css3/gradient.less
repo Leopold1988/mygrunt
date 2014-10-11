@@ -1,0 +1,36 @@
+.gradient (@type, @derication, @startColor, @endColor...) when (@type = linear) {
+	@linearall: ~`"@{arguments}".replace(/^\[|\]$/g,'').replace(/linear\,/g,'')`;
+	//background: -webkit-gradient(@type,center top,center bottom,from(@startColor), to(@endColor));
+	background-image:linear-gradient(@linearall);
+	background-image:-webkit-linear-gradient(@linearall);
+	background-image:-moz-linear-gradient(@linearall);
+	background-image:-o-linear-gradient(@linearall);
+	background-image:-ms-linear-gradient(@linearall);
+}
+
+.gradient (@type, @derication, @startColor, @endColor...) when (@type = linearurl) {
+	@linearall: ~`"@{arguments}".replace(/^\[|\]$/g,'').replace(/linearurl\,/g,'')`;
+	@url: ~`"@{arguments}".match(/url\(.*\)/g)`;
+	@linear: ~`"@{linearall}".replace(/\,\s*url\(.*\)/g,'')`;
+	background-image:@url,linear-gradient(@linear);
+	background-image:@url,-webkit-linear-gradient(@linear);
+	background-image:@url,-moz-linear-gradient(@linear);
+	background-image:@url,-o-linear-gradient(@linear);
+	background-image:@url,-ms-linear-gradient(@linear);
+	//color:
+}
+
+.gradient (@type, @derication, @startColor, @endColor...) when (@type = radial) {
+	@linearall: ~`"@{arguments}".replace(/^\[|\]$/g,'').replace(/radial\,/g,'')`;
+	background-image:radial-gradient(@linearall);
+	background-image:-webkit-radial-gradient(@linearall);
+	background-image:-moz-radial-gradient(@linearall);
+	background-image:-o-radial-gradient(@linearall);
+	background-image:-ms-radial-gradient(@linearall);
+}
+
+// -webkit-linear-gradient(left, #000000 50%, #ffffff 50%, ...)
+// type 			linear-gradien渐变类型,如left/top,也可为90deg
+// colorstart 		#000000,渐变距离可选,如50%/20px
+// colorend 		#ffffff,渐变距离可选,如50%/20px
+// ... 				可追加多个颜色

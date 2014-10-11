@@ -1,0 +1,7 @@
+{
+  "errorcode" : 1003,
+  "internet" : true,
+  "lan" : true,
+  "connection" : false,
+  "Wireless" : true
+}

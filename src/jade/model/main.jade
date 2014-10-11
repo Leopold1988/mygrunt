@@ -1,16 +1,20 @@
 include ../variables/var
+- var dist = "../../dist";
 doctype html
 head
   meta(charset='utf-8')
-  meta(name="copyright", content="")
-  meta(name="revisit-after", content="1 days")
-  meta(name="author", content="Leopold")
+  meta(http-equiv="Pragma", Content="No-cach")
+  meta(http-equiv="Widow-target", Content="_top")
+  meta(name="Robots", Content="Nofollow")
+  meta(name="Description", Content="你网页的简述")
+  meta(name="copyright", Content="")
+  meta(name="author", Content="Leopold")
   title= title
-  link(rel="stylesheet", href="../../dist/css/style.css")
-  script(src="../../dist/js/jquery/jquery-1.11.1.js")
-  script(src="../../seajs/sea.js")
-  script(src="../../seajs/seajs-preload.js")
-  script(src="../../dist/js/config.js")
+  link(rel="stylesheet", href="#{dist}/css/style.css")
+  script(src="#{dist}/js/jquery/jquery-1.11.1.js")
+  script(src="#{dist}/js/seajs/sea.js")
+  script(src="#{dist}/js/seajs/seajs-preload.js")
+  script(src="#{dist}/js/config.js")
 
 body
   block page-body

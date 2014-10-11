@@ -1,0 +1,84 @@
+//
+// Mixins
+// --------------------------------------------------
+
+// Clear floats
+.clearfix {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Border box
+.border-box() {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  *behavior: url(/css/ie/boxsizing.htc);
+}
+
+// Hide text for image
+.hide-text() {
+  background-color: transparent;
+  border: 0 none;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+}
+
+// Remove border
+.borderless() {
+  border: 0 none;
+}
+
+// Shortcut for generating width, height and padding properties
+.size(@size) {
+  height: @size;
+  width: @size;
+}
+
+.size(@height; @width; @padding) {
+  height: @height;
+  padding: @padding;
+  width: @width;
+}
+
+// Hides content visually, but accessible to screenreaders, and allow the element to be focusable when navigated to via the keyboard.
+.visually-hidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+
+  &:active,
+  &focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+  }
+}
+
+// Helper for generating inline-block property for IE 6 & 7
+.inline-block() {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}

@@ -1,5 +1,128 @@
-div{
-  height:180px;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+}
+:focus {
+  outline: 0;
+}
+table {
+  border-collapse: separate;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+input,
+textarea,
+select,
+button {
+  font-size: 100%;
+  font-family: inherit;
+}
+select {
+  margin: inherit;
+}
+/* Fixes incorrect placement of numbers in ol's in IE6/7 */
+ol {
+  margin-left: 2em;
+}
+/* == clearfix == */
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
 }
 /*!
 Animate.css - http://daneden.me/animate
@@ -7,6 +130,14 @@ Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 Copyright (c) 2014 Daniel Eden
 */
+/*
+当运动结束时：
+$(function(){
+  $('div.a').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    alert("over");
+  });
+})
+;*/
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -2777,17 +2908,22 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp;
 }
-body {
-  background: "#cccccc";
+.backhidden {
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
-div.a {
-  width: 500px;
-  text-align: center;
-  margin: 50px auto 0;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-name: tada;
-  animation-name: tada;
+ul {
+  width: 800px;
+  overflow: hidden;
+  margin: 100px auto 0;
+}
+ul li {
+  width: 190px;
+  height: 190px;
+  margin: 0 0 10px 10px;
+  display: inline;
+  background-color: #ccc;
+  float: left;
 }

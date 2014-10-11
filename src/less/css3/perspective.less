@@ -1,0 +1,21 @@
+// 配合transform:3d 使用
+// div.father -> .perspective
+//   div.3d -> .transform3d
+//     div.rotate -> .transform:totate();
+
+
+.perspective(){
+  perspective:1000;
+  -webkit-perspective:1000;
+  -moz-perspective:1000;
+  -o-perspective:1000;
+  -ms-perspective:1000;
+}
+
+.transform3d(){
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+}

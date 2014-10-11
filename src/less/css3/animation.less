@@ -1,0 +1,285 @@
+.animation(@all){
+  animation:@arguments;
+	-webkit-animation:@arguments;
+	-moz-animation:@arguments;
+	-o-animation:@arguments;
+  -ms-animation:@arguments;
+}
+
+// @-webkit-keyframes 'progress-bar-stripes'{
+//     from{
+//       background-position:40px 0
+//     }
+//     to{
+//       background-position:0 0
+//     }
+// }
+
+// animation-name	规定需要绑定到选择器的 keyframe 名称。。
+// animation-duration	规定完成动画所花费的时间，以秒或毫秒计。
+// animation-timing-function	规定动画的速度曲线。
+// animation-delay	规定在动画开始之前的延迟。
+// animation-iteration-count 是用来指定元素播放动画的循环次数，其可以取值<number>为数字，其默认值为“1”；infinite为无限次数循环。
+// animation-direction	规定是否应该轮流反向播放动画。
+
+.keyframes{
+	@-webkit-keyframes progress-bar-stripes{
+    from{
+      .transform (scale(1));
+    }
+    50%{
+      .transform (scale(1.2));
+    }
+    to{
+      .transform (scale(1));
+    }
+  }
+
+  @-moz-keyframes progress-bar-stripes{
+    from{
+      .transform (scale(1));
+    }
+    50%{
+      .transform (scale(1.2));
+    }
+    to{
+      .transform (scale(1));
+    }
+  }
+
+  @-o-keyframes progress-bar-stripes{
+    from{
+      .transform (scale(1));
+    }
+    50%{
+      .transform (scale(1.2));
+    }
+    to{
+      .transform (scale(1));
+    }
+  }
+
+  @-ms-keyframes progress-bar-stripes{
+    from{
+      .transform (scale(1));
+    }
+    50%{
+      .transform (scale(1.2));
+    }
+    to{
+      .transform (scale(1));
+    }
+  }
+
+  @keyframes progress-bar-stripes{
+    from{
+      .transform (scale(1));
+    }
+    50%{
+      .transform (scale(1.2));
+    }
+    to{
+      .transform (scale(1));
+    }
+  }
+}
+
+
+.chilun{
+  @-webkit-keyframes zheng{
+    from{
+      .transform (rotate(0deg));
+    }
+    to{
+      .transform (rotate(15deg));
+    }
+  }
+
+  @-moz-keyframes zheng{
+    from{
+      .transform (rotate(0deg));
+    }
+    to{
+      .transform (rotate(15deg));
+    }
+  }
+
+  @-o-keyframes zheng{
+    from{
+      .transform (rotate(0deg));
+    }
+    to{
+      .transform (rotate(15deg));
+    }
+  }
+
+  @-ms-keyframes zheng{
+    from{
+      .transform (rotate(0deg));
+    }
+    to{
+      .transform (rotate(15deg));
+    }
+  }
+
+  @keyframes zheng{
+    from{
+      .transform (rotate(0deg));
+    }
+    to{
+      .transform (rotate(15deg));
+    }
+  }
+
+  @-webkit-keyframes fan{
+    from{
+      .transform (rotate(0));
+    }
+    to{
+      .transform (rotate(-15deg));
+    }
+  }
+
+  @-moz-keyframes fan{
+    from{
+      .transform (rotate(0));
+    }
+    to{
+      .transform (rotate(-15deg));
+    }
+  }
+
+  @-o-keyframes fan{
+    from{
+      .transform (rotate(0));
+    }
+    to{
+      .transform (rotate(-15deg));
+    }
+  }
+
+  @-ms-keyframes fan{
+    from{
+      .transform (rotate(0));
+    }
+    to{
+      .transform (rotate(-15deg));
+    }
+  }
+
+  @keyframes fan{
+    from{
+      .transform (rotate(0));
+    }
+    to{
+      .transform (rotate(-15deg));
+    }
+  }
+}
+
+.hotnew{
+  @-webkit-keyframes move{
+    from{
+      .transform (translate(0,0));
+    }
+    15%{
+      .transform(translate(0,-2px));
+    }
+    20%{
+      .transform (translate(0,0));
+    }
+    25%{
+      .transform(translate(0,-2px));
+    }
+    30%{
+      .transform (translate(0,0));
+    }
+    to{
+      .transform (translate(0,0));
+    }
+  }
+
+  @-moz-keyframes move{
+    from{
+      .transform (translate(0,0));
+    }
+    15%{
+      .transform(translate(0,-2px));
+    }
+    20%{
+      .transform (translate(0,0));
+    }
+    25%{
+      .transform(translate(0,-2px));
+    }
+    30%{
+      .transform (translate(0,0));
+    }
+    to{
+      .transform (translate(0,0));
+    }
+  }
+
+  @-o-keyframes move{
+    from{
+      .transform (translate(0,0));
+    }
+    15%{
+      .transform(translate(0,-2px));
+    }
+    20%{
+      .transform (translate(0,0));
+    }
+    25%{
+      .transform(translate(0,-2px));
+    }
+    30%{
+      .transform (translate(0,0));
+    }
+    to{
+      .transform (translate(0,0));
+    }
+  }
+
+  @-ms-keyframes move{
+    from{
+      .transform (translate(0,0));
+    }
+    15%{
+      .transform(translate(0,-2px));
+    }
+    20%{
+      .transform (translate(0,0));
+    }
+    25%{
+      .transform(translate(0,-2px));
+    }
+    30%{
+      .transform (translate(0,0));
+    }
+    to{
+      .transform (translate(0,0));
+    }
+  }
+
+  @keyframes move{
+    from{
+      .transform (translate(0,0));
+    }
+    15%{
+      .transform(translate(0,-2px));
+    }
+    20%{
+      .transform (translate(0,0));
+    }
+    25%{
+      .transform(translate(0,-2px));
+    }
+    30%{
+      .transform (translate(0,0));
+    }
+    to{
+      .transform (translate(0,0));
+    }
+  }
+}
