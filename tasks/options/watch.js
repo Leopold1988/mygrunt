@@ -4,7 +4,9 @@ module.exports = exports = {
   },
   development: {
     files: [
-      '<%= src %>/**/*.js',
+      '<%= src %>/app/*.js',
+      '<%= src %>/model/**/*.js',
+      '<%= src %>/model/*.js',
       '<%= src %>/**/*.less',
       '<%= src %>/jade/**',
       'tasks/options/*.js'
@@ -14,6 +16,7 @@ module.exports = exports = {
       'clean',
       'copy:base',
       'copy:sea',
+      'copy:sealab',
       'copy:model',
       'copy:images',
       'copy:app',
@@ -36,6 +39,7 @@ module.exports = exports = {
       'clean',
       'copy:base',
       'copy:sea',
+      'copy:sealab',
       'copy:model',
       'copy:images',
       'copy:app',

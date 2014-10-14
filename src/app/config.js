@@ -2,18 +2,23 @@ seajs.config({
 
   // 别名配置
   alias: {
-    'json': '../js/base/json2/json2.js'
+    'json': '../js/tool/json2.js',
+    'png': '../js/tool/DD_belatedPNG_0.0.8a.js',
+    'modernizr': '../js/modernizr/modernizr.js',
+    'firebug': 'https://getfirebug.com/firebug-lite.js'
   },
+
+  base: "../model",
 
   // 路径配置
   paths: {
     'js': '../js',
-    'model': '../model'
+    'model': '../../model'
   },
 
   // 变量配置
   // vars: {
-  //   'locale': 'zh-cn'
+  //   'varisIE6': document.all && !window.XMLHttpRequest
   // },
 
   // 映射配置
@@ -23,7 +28,10 @@ seajs.config({
 
   // 预加载项
   preload: [
-    this.JSON ? '' : 'json'
+    'modernizr',
+    this.JSON ? '' : 'json',
+    document.all && !window.XMLHttpRequest ? 'png' : '',
+    document.all && !window.XMLHttpRequest ? 'firebug' : ''
   ],
 
   // // 调试模式

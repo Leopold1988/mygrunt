@@ -16,7 +16,8 @@ module.exports = exports = {
           }
           var ip = interfaces[i].filter(ipFilter);
           if (ip.length) {
-            return ip.shift().address;
+            var hostname = ip.shift().address;
+            return hostname;
           }
         }
         return "localhost";

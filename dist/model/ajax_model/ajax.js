@@ -1,8 +1,12 @@
 define(function(require, exports, module) {
   exports.do = function (data, success, fail, config) {
     var config = config || {};
+
+    config.url = config.url ? config.url : null;
+    config.timeout = config.timeout ? config.timeout : null;
+
     var xmlRequest = $.ajax({
-      url: "/dist/api.json" || config.url,
+      url: "../api.json" || config.url,
       async: config.async || true,
       cache: false,
       dataType: "json",
