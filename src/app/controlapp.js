@@ -6,7 +6,7 @@ define(function(require, exports, module) {
   // integrate.console();
   require('./metro');
   require('./ajaxapp').doSomething();
-  // require('./cookieapp').doSomething();
+  require('./cookieapp').doSomething();
 
 
 });

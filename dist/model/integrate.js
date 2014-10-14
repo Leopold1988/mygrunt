@@ -17,8 +17,6 @@ define(function(require, exports, module) {
             window.console[m[i]] = null;
           }
         }
-
-        console.log(111);
       })();
     }
   };

@@ -28,10 +28,10 @@ seajs.config({
 
   // 预加载项
   preload: [
-    'modernizr',
-    this.JSON ? '' : 'json',
+    document.all && !window.XMLHttpRequest ? 'firebug' : '',
     document.all && !window.XMLHttpRequest ? 'png' : '',
-    document.all && !window.XMLHttpRequest ? 'firebug' : ''
+    'modernizr',
+    this.JSON ? '' : 'json'
   ],
 
   // // 调试模式

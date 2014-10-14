@@ -1,5 +1,5 @@
 define(function(require, exports, module) {
-  exports.do = function (data, success, fail, config) {
+  exports.doit = function (data, success, fail, config) {
     var config = config || {};
 
     config.url = config.url ? config.url : null;
