@@ -82,3 +82,48 @@
   *display: inline;
   *zoom: 1;
 }
+
+// 垂直居中，display相互覆盖可能引发BUG
+
+// 结构
+// tag 任意标签
+//   .cell 包裹一层
+//     .middle 需要居中的标签
+.valign-middle(){
+  display:table;
+  *position:relative;
+
+  .cell{
+    vertical-align:middle;
+    display:table-cell;
+    *position:absolute;
+    *top:50%;
+    left:0;
+
+    .middle{
+      *position:relative;
+      *top:-50%;
+    }
+  }
+}
+
+// 水平居中
+
+// 结构
+// tag 任意标签
+//   .cell 包裹一层
+//     .center 需要居中的标签
+.align-center(){
+  .ceil{
+    float: left;
+    position: relative;
+    left: 50%;
+    top:0;
+    .center{
+      float: left;
+      position: relative;
+      right: 50%;
+      top:0;
+    }
+  }
+}

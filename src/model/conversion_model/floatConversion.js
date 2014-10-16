@@ -3,8 +3,13 @@ define(function(require, exports, module) {
     var child = obj.find("li");
     var arr = [];
 
+    obj.css("height", obj.height());
+
     child.each(function (i, e) {
-      arr.push([$(this).offset().left, $(this).offset().top]);
+      arr.push([
+        $(this).offset().left - $(this).css("margin-left").replace("px", ""),
+        $(this).offset().top - $(this).css("margin-top").replace("px", "")
+      ]);
     });
 
     child.each(function (i, e) {

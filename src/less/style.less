@@ -4,17 +4,63 @@ body{
 
 }
 
-ul{
+
+
+#metroUl{
   width: 800px;
   overflow: hidden;
   margin: 100px auto 0;
   li{
-    background: #ccc url("../images/table_bg.png") top center no-repeat;
+    .valign-middle();
+    background: #ccc;
     width: 190px;
     height: 190px;
     margin: 0 0 10px 10px;
-    display: inline;
-    background-color: #ccc;
+    _display: inline;
     float: left;
+
+    .drop{
+      display: none;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      p{
+        width: 100%;
+        height: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        background-color: rgb(0, 0, 0);
+        color: #fff;
+      }
+    }
+
+    .active{
+      display: table;
+    }
+  }
+}
+
+#center{
+  width: 1000px;
+  margin: 50px auto 0;
+  background-color: #ccc;
+  .align-center();
+
+  ul{
+    .clearfix;
+    li{
+      width: 100px;
+      height: 100px;
+      background-color: blue;
+      float: left;
+      _display: inline;
+    }
+  }
+
+}
+
+.rgba{
+  ul li .drop p{
+    background-color: rgba(0, 0, 0, 0.5)!important;
   }
 }
