@@ -1,22 +1,24 @@
 /*
-Dependence = [
-	'Modernizr', 	// animations && opacity
-	'animate.css'
-]
-*/
+	{
+		Version : "1.0.1",
+		Name : "hipopup",
+		Author : "leopold",
+		Date : "2014-10-21",
+		Dependence : [ // 依赖
+			'Modernizr', 		// animations && opacity
+			'animate.css'		// 盒子动画效果库
+		],
+		Setoptions : { // 参数(都为可选参数)
+			bg : boolean		// 是否有背景颜色(默认为true)
+			border: boolean // 盒子周围是否有半透明边框(默认为true)
+			bgcss : object	// 背景样式
+			boxcss : object	// 盒子样式
+			follow : boolean// 是否跟随滚动条(默认为false)
+			ajaxcallback : function (id) { // ajax开启后，可选回调，id为回调函数的可选参数，返回出发弹出层按钮的ID
 
-/*
-setoptions = {
-	bg : boolean		// 是否有背景颜色(默认为true)
-	border: boolean // 盒子周围是否有半透明边框(默认为true)
-	bgcss : object	// 背景样式
-	boxcss : object	// 盒子样式
-	ajax : boolean	// 是否为ajax(默认为false)
-	follow : boolean// 是否跟随滚动条
-	ajaxcallback : function (id) { // ajax开启后，可选回调，id为回调函数的可选参数，返回出发弹出层按钮的ID
-
+			}
+		}
 	}
-}
 */
 (function($){
 	$.fn.hipopup = function (setoptions) {
@@ -27,10 +29,13 @@ setoptions = {
 
 			$this.on({
 				click : function(){
+					setoptions = setoptions ? setoptions : {};
+					setoptions.bgcss = setoptions.bgcss ? setoptions.bgcss : {};
+					setoptions.boxcss = setoptions.boxcss ? setoptions.boxcss : {};
 					_this.bgOpts = setoptions.bgcss ? $.extend($.fn.hipopup.bgdefault, setoptions.bgcss) : $.fn.hipopup.bgdefault;
 					_this.boxOpts = setoptions.boxcss ? $.extend($.fn.hipopup.boxdefault, setoptions.boxcss) : $.fn.hipopup.boxdefault;
-					_this.follow = setoptions.follow;
-					_this.drakbg = setoptions.bg;
+					_this.follow = setoptions.follow || false;
+					_this.drakbg = setoptions.bg || true;
 					_this.border = setoptions.border ? setoptions.border : _this.border;
 
 					var $inline = $this.attr("data-which");
@@ -133,8 +138,6 @@ setoptions = {
 		var _this = this;
 		_this.boxOpts.left = ($(document.body).width() - box.width()) / 2 + $(document).scrollLeft();
 		_this.boxOpts.top = ($(window).height() - box.height()) / 2 + $(document).scrollTop();
-
-		console.log($("body,html").scrollTop());
 
 		box.css({
 			left : _this.boxOpts.left,
