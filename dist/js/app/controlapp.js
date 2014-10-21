@@ -5,6 +5,7 @@ define(function(require, exports, module) {
 
   // integrate.console();
   require('./metro');
+  require('./popup');
   require('./hoverapp');
   require('./ajaxapp').doSomething();
   require('./cookieapp').doSomething();

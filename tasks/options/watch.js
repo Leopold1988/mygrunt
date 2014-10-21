@@ -5,8 +5,8 @@ module.exports = exports = {
   development: {
     files: [
       '<%= src %>/app/*.js',
-      '<%= src %>/model/**/*.js',
-      '<%= src %>/model/*.js',
+      '<%= src %>/base/**',
+      '<%= src %>/model/**',
       '<%= src %>/**/*.less',
       '<%= src %>/jade/**',
       'tasks/options/*.js'

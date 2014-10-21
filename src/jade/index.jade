@@ -12,3 +12,16 @@ block page-body
       ul.center
         - for (var x = 0; x < 4; x++)
             li
+  #popup
+    input#inline(type="button", value="inline弹出层", data-which="pop1")
+    br
+    input#ajax(type="button", value="ajax弹出层", data-url="../model/popup_model/1.html")
+    #pop1.hipopupbox(hipopup="inline")
+      a.close
+      .inner
+        | 1234
+        br
+        | 1234
+        br
+        | 1234
+        br

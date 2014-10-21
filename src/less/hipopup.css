@@ -1,0 +1,41 @@
+/* 盒子和背景初始化隐藏 */
+.hipopupbox,.hipopupbg{
+  display: none;
+}
+
+/* 盒子外层样式 */
+.hipopupbox{
+  min-width : 100px;
+  min-height : 100px;
+}
+
+/* 盒子边框样式 */
+.hipopupbox_border{
+  padding: 8px;
+  background-color: rgba(0,0,0,.2);
+  border-radius: 8px;
+}
+
+/* 盒子内容层样式 */
+.hipopupbox .inner{
+  min-width : 100px;
+  min-height : 100px;
+  padding: 10px;
+  background : #ffffff;
+}
+
+/* 关闭按钮样式 */
+.hipopupbox a.close{
+  height: 20px;
+  width: 20px;
+  background: url(../images/cls.gif) 0 0 no-repeat;
+  _overflow: hidden;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+}
+
+.hipopupbox a.close:hover{
+  background: url(../images/cls.gif) 0 -20px no-repeat;
+}

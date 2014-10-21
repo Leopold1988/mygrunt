@@ -5,6 +5,7 @@ seajs.config({
     'json': '../js/tool/json2.js',
     'png': '../js/tool/DD_belatedPNG_0.0.8a.js',
     'modernizr': '../js/modernizr/modernizr.js',
+    'hipopup': '../js/jquery/hipopup.js',
     'firebug': 'https://getfirebug.com/firebug-lite.js'
   },
 
@@ -31,6 +32,7 @@ seajs.config({
     document.all && !window.XMLHttpRequest ? 'firebug' : '',
     document.all && !window.XMLHttpRequest ? 'png' : '',
     'modernizr',
+    'hipopup',
     this.JSON ? '' : 'json'
   ],
 
