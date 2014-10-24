@@ -4,7 +4,10 @@ body{
 
 }
 
-
+.w1000{
+  width: 1000px;
+  margin: 0 auto;
+}
 
 #metroUl{
   width: 800px;
@@ -61,6 +64,48 @@ body{
 #popup{
   width: 1000px;
   margin: 20px auto 0;
+}
+
+#placeholder{
+  position: relative;
+  .suggest{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 21px;
+    z-index: 10;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+    li{
+      padding: 8px;
+      background-color: #fff;
+    }
+    li.active{
+      background-color: orange;
+    }
+  }
+}
+
+#hover{
+  height: 200px;
+  .style1,.style2{
+    float: left;
+    width: 300px;
+    position: relative;
+    .hide{
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 300px;
+      height: 30px;
+      background-color: #ccc;
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+  }
 }
 
 .rgba{
