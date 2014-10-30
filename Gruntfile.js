@@ -36,6 +36,7 @@ module.exports = function(grunt) {
     'less:production',
     'jade:release',
     'imagemin:dynamic',
+    'connect',
     'watch'
   ]);
 };

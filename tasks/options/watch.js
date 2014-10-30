@@ -15,7 +15,8 @@ module.exports = exports = {
       'uglify:buildall',
       'less:production',
       'jade:release',
-      'imagemin:dynamic'
+      'imagemin:dynamic',
+      'connect'
     ]
   }
 };
