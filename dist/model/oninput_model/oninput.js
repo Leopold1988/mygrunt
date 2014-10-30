@@ -6,9 +6,12 @@ define(function(require, exports, module) {
     if(window.addEventListener) { //先执行W3C
       input.addEventListener("input", callback, false);
     } else {
-      input.attachEvent("onpropertychange", function(){
-        callback.call(input);
-      });
+      setTimeout(function(){
+        input.attachEvent("onpropertychange", function(){
+          callback.call(input);
+          console.log("onpropertychange");
+        });
+      }, 100);
     }
 
     if (navigator.userAgent.match("MSIE 9.0")) {
@@ -16,10 +19,11 @@ define(function(require, exports, module) {
       input.attachEvent("onkeyup", function() {
         var key = window.event.keyCode;
         (key == 8 || key == 46) && callback.call(input);//处理回退与删除
-
+        console.log("onkeyup");
       });
       input.attachEvent("oncut", function(){
         callback.call(input);
+        console.log("oncut");
       });//处理粘贴
     }
   };

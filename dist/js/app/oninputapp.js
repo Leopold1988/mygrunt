@@ -10,41 +10,49 @@ define(function(require, exports, module) {
     var allli = "";
 
     if (this.value.search("@") !== -1) {
-      // new RegExp(this.value, g)
-      console.log(mail.join(","));
-      console.log(new RegExp(this.value, "g"));
-      console.log(userlist.join(",").match(new RegExp(this.value, "g")));
+      // console.log(new RegExp(this.value.match(/@.*/)));
+      // console.log(mail.join(","));
+      var re = /([a-zA-Z0-9_]+)(@[a-zA-Z0-9]*\.?[a-zA-Z0-9]*\.?[a-zA-Z0-9]*)/;
+      re.test(this.value);
+      var mailname = RegExp.$1;
+      var mailSuffix = RegExp.$2;
+
+      var b = new RegExp(mailSuffix);
+      console.log(b);
+
+      for (var k = 0; k < mail.length; k++) {
+
+        var a = mail[k].search(b);
+
+        if (a !== -1) {
+          allli += "<li>" + mailname + "" + mail[k] + "</li>";
+        }
+      }
     } else {
       for (var i = 0; i < mail.length; i++) {
         userlist = [];
         userlist.push(this.value + "" + mail[i]);
-        if (i === 0) {
-          allli += "<li class='active'>" + this.value + "" + mail[i] + "</li>";
-        } else {
-          allli += "<li>" + this.value + "" + mail[i] + "</li>";
-        }
+        allli += "<li>" + this.value + "" + mail[i] + "</li>";
       }
     }
 
+    $("#placeholder .suggest").show().find("ul").html(allli).find("li:eq(0)").addClass('active');
 
-
-    $("#placeholder .suggest").show().find("ul").html(allli);
+    $("#placeholder .suggest ul li").on({
+      mouseover : function(){
+        $("#placeholder .suggest ul li").removeClass('active').eq($(this).index()).addClass('active');
+      },
+      mouseout : function(){
+        $("#placeholder .suggest ul li").removeClass('active').eq(0).addClass('active');
+      },
+      click : function(){
+        $("#placeholder input").val($(this).html());
+        $("#placeholder .suggest").hide();
+      }
+    });
     index = 0;
 
     if (this.value === "" || this.value === null) {
-      $("#placeholder .suggest").hide();
-    }
-  });
-
-  $("#placeholder .suggest ul li").on({
-    mouseover : function(){
-      $("#placeholder .suggest ul li").removeClass('active').eq($(this).index()).addClass('active');
-    },
-    mouseout : function(){
-      $("#placeholder .suggest ul li").removeClass('active').eq(0).addClass('active');
-    },
-    click : function(){
-      $("#placeholder input").val($(this).html());
       $("#placeholder .suggest").hide();
     }
   });
@@ -78,7 +86,7 @@ define(function(require, exports, module) {
       $("#placeholder .suggest ul li").removeClass('active').eq(index).addClass('active');
     },
     blur : function(){
-      $("#placeholder .suggest").hide();
+      // $("#placeholder .suggest").hide();
     }
   });
 });
