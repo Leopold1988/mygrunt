@@ -3,6 +3,7 @@ module.exports = exports = {
     files: [
       'src/js/*.js',
       'src/less/*.less',
+      'src/less/**/*.less',
       'src/jade/**',
       'tasks/options/*.js'
     ],
