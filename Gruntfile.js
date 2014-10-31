@@ -45,6 +45,7 @@ module.exports = function(grunt) {
     'less:development',
     'jade',
     'imagemin',
+    // 'configureProxies:server',
     'connect',
     // 'open:google',
     'watch:development'
