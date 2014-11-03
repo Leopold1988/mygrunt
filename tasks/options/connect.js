@@ -27,9 +27,13 @@ module.exports = exports = {
        middleware: function (connect, options, middlewares) {
           // inject a custom middleware
           middlewares.unshift(function (req, res, next) {
-              res.setHeader("csp-report", "default-src https://*.teambition.com; script-src https://dn-st.oss.aliyuncs.com https://hm.baidu.com https://cdn.mxpnl.com https://www.google-analytics.com; style-src data: 'unsafe-inline' https://dn-st.oss.aliyuncs.com; img-src data: blob: https://*.teambition.com https://dn-st.oss.aliyuncs.com https://dn-st.qbox.me https://hm.baidu.com https://www.google-analytics.com; frame-src https:; font-src https://dn-st.oss.aliyuncs.com; connect-src https://*.teambition.com wss://*.teambition.com https://api.mixpanel.com");
-              //a console.log('foo') here is helpful to see if it runs
-              return next();
+            // var address = options.hostname + ":" + options.port;
+            var csp = "default-src 'self' http://192.168.10.110:9000/; script-src 'self' 'unsafe-inline' http://192.168.10.110:35729/ http://192.168.10.110:9000/; object-src 'none'; img-src 'self'; media-src 'none'; frame-src 'none'; font-src 'none'; connect-src 'self' ws://192.168.10.110:35729/livereload; report-uri http://192.168.10.110:9000/";
+            res.setHeader("Content-Security-Policy", csp);
+            res.setHeader("X-Content-Security-Policy", csp);
+            res.setHeader("X-WebKit-CSP", csp);
+
+            return next();
           });
 
           return middlewares;
