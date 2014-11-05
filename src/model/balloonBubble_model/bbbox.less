@@ -1,0 +1,45 @@
+@bgcolor:#428bca;
+@left:60px;
+@top:10px;
+
+.bbbox{
+  display: none;
+  position: absolute;
+  line-height: 20px;
+  padding:10px;
+  background:@bgcolor;
+  color:#fff;
+  .radius(2px);
+}
+
+.triangle{
+  font-size: 24px;
+  line-height: 24px;
+  color:@bgcolor;
+  overflow:hidden;
+  position:absolute;
+}
+
+.triangle_bottom{
+  .triangle;
+  left:@left;
+  bottom:-10px;
+}
+
+.triangle_top{
+  .triangle;
+  left:@left;
+  top:-10px;
+}
+
+.triangle_right{
+  .triangle;
+  right:-10px;
+  top:@top;
+}
+
+.triangle_left{
+  .triangle;
+  left:-10px;
+  top:@top;
+}

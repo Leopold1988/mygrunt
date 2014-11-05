@@ -9,11 +9,13 @@ define(function(require, exports, module) {
 
   require('./metro');
   require('./oninputapp');
+  require('./strengthapp');
   // require('./countdownapp');
   require('./placeholderapp');
   require('./dateapp');
   require('./popup');
   require('./hoverapp');
+  require('./balloonbubbleapp');
   require('./ajaxapp').doSomething();
   require('./cookieapp').doSomething();
 });

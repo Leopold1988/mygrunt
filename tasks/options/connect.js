@@ -29,9 +29,9 @@ module.exports = exports = {
           middlewares.unshift(function (req, res, next) {
             // var address = options.hostname + ":" + options.port;
             var csp = "default-src 'self' http://192.168.10.110:9000/; script-src 'self' 'unsafe-inline' http://192.168.10.110:35729/ http://192.168.10.110:9000/; object-src 'none'; img-src 'self'; media-src 'none'; frame-src 'none'; font-src 'none'; connect-src 'self' ws://192.168.10.110:35729/livereload; report-uri http://192.168.10.110:9000/";
-            res.setHeader("Content-Security-Policy", csp);
-            res.setHeader("X-Content-Security-Policy", csp);
-            res.setHeader("X-WebKit-CSP", csp);
+            // res.setHeader("Content-Security-Policy", csp);
+            // res.setHeader("X-Content-Security-Policy", csp);
+            // res.setHeader("X-WebKit-CSP", csp);
 
             return next();
           });

@@ -6,7 +6,7 @@ seajs.config({
     'png': '../js/tool/DD_belatedPNG_0.0.8a.js',
     'modernizr': '../js/modernizr/modernizr.js',
     'hipopup': '../js/jquery/hipopup.js',
-    'firebug': 'https://getfirebug.com/firebug-lite.js'
+    'firebug': 'http://fbug.googlecode.com/svn/lite/branches/firebug1.4/content/firebug-lite-dev.js'
   },
 
   base: "../model",
@@ -18,9 +18,9 @@ seajs.config({
   },
 
   // 变量配置
-  // vars: {
-  //   'varisIE6': document.all && !window.XMLHttpRequest
-  // },
+  vars: {
+    'varisIE6': document.all && !window.XMLHttpRequest
+  },
 
   // 映射配置
   // map: [
@@ -29,7 +29,7 @@ seajs.config({
 
   // 预加载项
   preload: [
-    document.all && !window.XMLHttpRequest ? 'firebug' : '',
+    // document.all && !window.XMLHttpRequest ? 'firebug' : '',
     document.all && !window.XMLHttpRequest ? 'png' : '',
     'modernizr',
     'hipopup',

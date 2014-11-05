@@ -2955,6 +2955,65 @@ $(function(){
 .hipopupbox a.close:hover{
   background: url(../images/cls.gif) 0 -20px no-repeat;
 }
+.bbbox {
+  display: none;
+  position: absolute;
+  line-height: 20px;
+  padding: 10px;
+  background: #428bca;
+  color: #fff;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+}
+.triangle {
+  font-size: 24px;
+  line-height: 24px;
+  color: #428bca;
+  overflow: hidden;
+  position: absolute;
+}
+.triangle_bottom {
+  font-size: 24px;
+  line-height: 24px;
+  color: #428bca;
+  overflow: hidden;
+  position: absolute;
+  left: 60px;
+  bottom: -10px;
+}
+.triangle_top {
+  font-size: 24px;
+  line-height: 24px;
+  color: #428bca;
+  overflow: hidden;
+  position: absolute;
+  left: 60px;
+  top: -10px;
+}
+.triangle_right {
+  font-size: 24px;
+  line-height: 24px;
+  color: #428bca;
+  overflow: hidden;
+  position: absolute;
+  right: -10px;
+  top: 10px;
+}
+.triangle_left {
+  font-size: 24px;
+  line-height: 24px;
+  color: #428bca;
+  overflow: hidden;
+  position: absolute;
+  left: -10px;
+  top: 10px;
+}
+body {
+  height: 3000px;
+}
 .w1000 {
   width: 1000px;
   margin: 0 auto;
@@ -3101,4 +3160,18 @@ $(function(){
 }
 .rgba ul li .drop p {
   background-color: rgba(0, 0, 0, 0.5) !important;
+}
+#countDown {
+  background: red;
+  color: #fff;
+  height: 30px;
+  text-align: center;
+}
+#balloonBubbles .bbbtn {
+  position: relative;
+}
+#balloonBubbles .bbbtn .aaa {
+  width: 100px;
+  padding-left: 200px;
+  background-color: #fff;
 }
