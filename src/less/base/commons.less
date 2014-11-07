@@ -22,7 +22,11 @@ h1,h2,h3,h4,h5,h6,p,tr,td,th,span,div,a{
   _font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', '\5FAE\8F6F\96C5\9ED1', Arial, sans-serif;
 }
 
+// 去除input聚焦边框
 a:focus {outline-style:none; -moz-outline-style: none;}
+
+// 去除IE下input内置清空功能
+input::-ms-clear{display:none;}
 
 .left {
   float: left;
