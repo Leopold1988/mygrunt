@@ -10,7 +10,7 @@ module.exports = exports = {
       compress : true
     },
     files: {
-      "dist/css/style.css": "src/less/style.less"
+      "dist/css/a.css": "src/less/a.less"
     }
   }
 };
