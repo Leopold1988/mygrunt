@@ -18,7 +18,7 @@ module.exports = exports = {
     files: [{
       expand:true,
       cwd:"<%= src %>/model",
-      src:['**/*.jade'],
+      src:['**/*.jade','!*mixin.jade','!**/*mixin.jade'],
       dest:'<%= dist %>/model',
       ext: '.html'
     }]

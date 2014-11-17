@@ -1,7 +1,17 @@
 mixin popmixin(type, prompt)
-  .popmodel
-    .popmodel_body
-      p prompt
-      .popline
-      if type == "confirm"
-        p 111111111111
+  .popmodel(class=type)
+    if type == "confirm"
+      .fontlayer
+        .prompt= prompt
+          .popline
+      .colorbar
+      .popbutton
+        a.button_blue 确定
+        a.button_blue.ml40 取消
+    else
+      .fontlayer
+        .cell
+          .middle
+            .prompt= prompt
+              .popline
+      .colorbar

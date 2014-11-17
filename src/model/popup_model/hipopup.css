@@ -29,8 +29,8 @@
 .hipopupbox .inner{
   min-width : 100px;
   min-height : 100px;
-  padding: 10px;
-  background : #ffffff;
+  /*padding: 10px;
+  background : #ffffff;*/
 }
 
 /* 关闭按钮样式 */
