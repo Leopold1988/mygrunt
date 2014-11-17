@@ -62,7 +62,7 @@ define(function(require, exports, module) {
         html.css($.extend(_directioncss, extendcss));
       },
       mouseleave : function(){
-        // html.remove();
+        html.remove();
       }
     });
 

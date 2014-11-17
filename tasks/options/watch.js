@@ -23,7 +23,8 @@ module.exports = exports = {
       'copy:api',
       //'concat',
       'less:development',
-      'jade',
+      'jade:default',
+      'jade:model',
       'imagemin'
     ]
   },

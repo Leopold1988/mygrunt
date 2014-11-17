@@ -4,7 +4,7 @@ define(function(require, exports, module) {
       follow:false,
       bg:true,
       ajax:true,
-      border:true,
+      border:false,
       bgcss:{opacity:0.5},
       ajaxcallback:function (id) {
         callbackFn(id);

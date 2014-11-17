@@ -1,0 +1,152 @@
+/* 按钮变量 */
+
+// 保存&弹窗提交按钮等
+@button-styleone-link-fontcolor: @white;        // 按钮文字颜色(:link)
+@button-styleone-link-bgcolor: #008bca;         // 按钮蓝色背景色(:link)
+@button-styleone-hover-bgcolor: #009ee6;        // 按钮蓝色背景色(:hover)
+@button-styleone-active-bgcolor: #00b0ff;       // 按钮蓝色背景色(:active)
+@button-styleone-gray-bgcolor: #87959c;         // 按钮灰色背景色(:link)
+
+// 获取验证码按钮等
+@button-styletwo-link-fontcolor: #008bca;       // 按钮文字颜色(:link)
+@button-styletwo-hover-fontcolor: @white;       // 按钮文字颜色(:hover)
+@button-styletwo-link-bgcolor: #e0f3ff;         // 按钮蓝色背景色(:link)
+@button-styletwo-hover-bgcolor: #2d9fd3;        // 按钮蓝色背景色(:hoveri)
+
+// 升级按钮等
+@button-stylethree-link-fontcolor: #004f89;       // 按钮文字颜色(:link)
+@button-stylethree-hover-fontcolor: @white;       // 按钮文字颜色(:hover)
+@button-stylethree-link-bgcolor: #add3ed;         // 按钮蓝色背景色(:link)
+@button-stylethree-hover-bgcolor: #2d7bb2;        // 按钮蓝色背景色(:hoveri)
+@button-stylethree-active-bgcolor: #87b2cf;       // 按钮蓝色背景色(:active)
+
+// 修改按钮按钮等
+@button-stylefour-link-fontcolor: @white;        // 按钮文字颜色(:link)
+@button-stylefour-link-bgcolor: #d85378;         // 按钮蓝色背景色(:link)
+@button-stylefour-hover-bgcolor: #ce345f;        // 按钮蓝色背景色(:hoveri)
+
+// 立刻升级按钮等
+@button-stylefive-link-fontcolor: @white;        // 按钮文字颜色(:link)
+@button-stylefive-hover-fontcolor: #59a3d9;      // 按钮文字颜色(:hover)
+@button-stylefive-link-bgcolor: #59a3d9;         // 按钮蓝色背景色(:link)
+@button-stylefive-hover-bgcolor: @white;        // 按钮蓝色背景色(:hoveri)
+
+.button(){
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  .inline-block();
+  .radius(4px);
+}
+
+// 保存或提交按钮相关(蓝色)
+.button_blue{
+  .button();
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: @button-styleone-link-bgcolor;
+  color: @button-styleone-link-fontcolor;
+  &:visited{
+    background-color: @button-styleone-link-bgcolor;
+    color: @button-styleone-link-fontcolor;
+  }
+  &:hover{
+    background-color: @button-styleone-hover-bgcolor;
+  }
+  &:active{
+    background-color: @button-styleone-active-bgcolor;
+  }
+}
+
+// 不可点击按钮相关(灰色)
+.button_gray{
+  .button();
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: @button-styleone-gray-bgcolor;
+  color: @button-styleone-link-fontcolor;
+}
+
+// 提交验证码相关(浅蓝色深蓝框)
+.button_style2{
+  .button();
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  border: 2px solid @button-styletwo-link-fontcolor;
+  background-color: @button-styletwo-link-bgcolor;
+  color: @button-styletwo-link-fontcolor;
+  &:hover{
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border: 0 none;
+    background-color: @button-styletwo-hover-bgcolor;
+    color: @button-styletwo-hover-fontcolor;
+  }
+}
+
+// 升级按钮相关(大圆角)
+.button_style3{
+  .button();
+  .radius(90px);
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background-color: @button-stylethree-link-bgcolor;
+  color: @button-stylethree-link-fontcolor;
+  &:visited{
+    background-color: @button-stylethree-link-bgcolor;
+    color: @button-stylethree-link-fontcolor;
+  }
+  &:hover{
+    background-color: @button-stylethree-hover-bgcolor;
+    color: @button-stylethree-hover-fontcolor;
+  }
+  &:active{
+    background-color: @button-stylethree-active-bgcolor;
+    color: @button-stylethree-link-fontcolor;
+  }
+}
+
+// 修改相关(红色)
+.button_style4{
+  .button();
+  .radius(0px);
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: @button-stylefour-link-bgcolor;
+  color: @button-stylefour-link-fontcolor;
+  &:hover{
+    background-color: @button-stylefour-hover-bgcolor;
+    color: @button-stylefour-link-fontcolor;
+  }
+}
+
+// 立即升级相关(蓝色白匡)
+.button_style5{
+  .button();
+  .radius(0px);
+  height: 74px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  border: 1px solid @button-stylefive-link-fontcolor;
+  background-color: @button-stylefive-link-bgcolor;
+  color: @button-stylefive-link-fontcolor;
+  &:hover{
+    height: 76px;
+    height: 30px;
+    line-height: 30px;
+    background-color: @button-stylefive-hover-bgcolor;
+    color: @button-stylefive-hover-fontcolor;
+  }
+}

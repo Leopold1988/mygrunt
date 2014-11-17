@@ -20,6 +20,21 @@
 		}
 	}
 */
+
+/*
+
+$("#ajax").hipopup({
+  follow:false,
+  bg:false,
+  ajax:true,
+  border:false,
+  bgcss:{opacity:0.5},
+  ajaxcallback:function (id) {
+    callbackFn(id);
+  }
+});
+
+*/
 (function($){
 	$.fn.hipopup = function (setoptions) {
 		var bgOpts, boxOpts, _this = $.fn.hipopup;
@@ -34,9 +49,9 @@
 					setoptions.boxcss = setoptions.boxcss ? setoptions.boxcss : {};
 					_this.bgOpts = setoptions.bgcss ? $.extend($.fn.hipopup.bgdefault, setoptions.bgcss) : $.fn.hipopup.bgdefault;
 					_this.boxOpts = setoptions.boxcss ? $.extend($.fn.hipopup.boxdefault, setoptions.boxcss) : $.fn.hipopup.boxdefault;
-					_this.follow = setoptions.follow || false;
-					_this.drakbg = setoptions.bg || true;
-					_this.border = setoptions.border ? setoptions.border : _this.border;
+					_this.follow = setoptions.follow ? setoptions.follow : false;
+					_this.drakbg = setoptions.bg ? setoptions.bg : false;
+					_this.border = setoptions.border ? setoptions.border : false;
 
 					var $inline = $this.attr("data-which");
 
@@ -103,6 +118,7 @@
 		if (methodJson.ajax) {
 			box = $($.fn.hipopup.option.boxTag);
 			box.appendTo($("body")).css(_this.boxOpts);
+			box.find(".inner").before("<a class='close'></a>");
 			method = "ajax";
 			_this.ajaxLoadDate(box, methodJson.ajax, function(){
 				methodJson.callback && methodJson.callback(methodJson.id);
@@ -285,7 +301,6 @@
 		bgTag : "<div class='hipopupbg'>",
 		duration : 100,
 		boxTag : "<div class='hipopupbox' hipopup='ajax'>" +
-							"<a class='close'></a>" +
 							"<div class='inner'></div>" +
 						 "</div>",
 		boxOpenAnimate : "flipInX",

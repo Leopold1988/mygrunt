@@ -1,3 +1,6 @@
+@import "../model/popup_model/poppublic.css";
+@import "../model/popup_model/hipopup.css";
+/* 初始化 */
 html,
 body,
 div,
@@ -124,6 +127,181 @@ ol {
 .clearfix:after {
   clear: both;
 }
+/* 功能 */
+/* 按钮变量 */
+.button_blue {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: #008bca;
+  color: #ffffff;
+}
+.button_blue:visited {
+  background-color: #008bca;
+  color: #ffffff;
+}
+.button_blue:hover {
+  background-color: #009ee6;
+}
+.button_blue:active {
+  background-color: #00b0ff;
+}
+.button_gray {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  width: 140px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background-color: #87959c;
+  color: #ffffff;
+}
+.button_style2 {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  border: 2px solid #008bca;
+  background-color: #e0f3ff;
+  color: #008bca;
+}
+.button_style2:hover {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  border: 0 none;
+  background-color: #2d9fd3;
+  color: #ffffff;
+}
+.button_style3 {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 90px;
+  -webkit-border-radius: 90px;
+  -moz-border-radius: 90px;
+  -o-border-radius: 90px;
+  -ms-border-radius: 90px;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background-color: #add3ed;
+  color: #004f89;
+}
+.button_style3:visited {
+  background-color: #add3ed;
+  color: #004f89;
+}
+.button_style3:hover {
+  background-color: #2d7bb2;
+  color: #ffffff;
+}
+.button_style3:active {
+  background-color: #87b2cf;
+  color: #004f89;
+}
+.button_style4 {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  width: 88px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  background-color: #d85378;
+  color: #ffffff;
+}
+.button_style4:hover {
+  background-color: #ce345f;
+  color: #ffffff;
+}
+.button_style5 {
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  -ms-border-radius: 0px;
+  height: 74px;
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  border: 1px solid #ffffff;
+  background-color: #59a3d9;
+  color: #ffffff;
+}
+.button_style5:hover {
+  height: 76px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #ffffff;
+  color: #59a3d9;
+}
+/* css3样式 */
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
@@ -2914,47 +3092,7 @@ $(function(){
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
-/* 盒子和背景初始化隐藏 */
-.hipopupbox,.hipopupbg{
-  display: none;
-}
-
-/* 盒子外层样式 */
-.hipopupbox{
-  min-width : 100px;
-  min-height : 100px;
-}
-
-/* 盒子边框样式 */
-.hipopupbox_border{
-  padding: 8px;
-  background-color: rgba(0,0,0,.2);
-  border-radius: 8px;
-}
-
-/* 盒子内容层样式 */
-.hipopupbox .inner{
-  min-width : 100px;
-  min-height : 100px;
-  padding: 10px;
-  background : #ffffff;
-}
-
-/* 关闭按钮样式 */
-.hipopupbox a.close{
-  height: 20px;
-  width: 20px;
-  background: url(../images/cls.gif) 0 0 no-repeat;
-  _overflow: hidden;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  z-index: 3;
-}
-
-.hipopupbox a.close:hover{
-  background: url(../images/cls.gif) 0 -20px no-repeat;
-}
+/* 模块化样式 */
 .bbbox {
   display: none;
   position: absolute;
@@ -3174,4 +3312,10 @@ body {
   width: 100px;
   padding-left: 200px;
   background-color: #fff;
+}
+#btn {
+  background: #59a4d9;
+}
+#btn a {
+  margin-left: 20px;
 }

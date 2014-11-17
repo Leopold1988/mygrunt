@@ -10,5 +10,17 @@ module.exports = exports = {
       dest:'<%= dist %>/html',
       ext: '.html'
     }]
+  },
+  model: {
+    options: {
+      pretty : true
+    },
+    files: [{
+      expand:true,
+      cwd:"<%= src %>/model",
+      src:['**/*.jade'],
+      dest:'<%= dist %>/model',
+      ext: '.html'
+    }]
   }
 };
