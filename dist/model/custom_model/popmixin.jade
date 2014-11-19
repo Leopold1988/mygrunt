@@ -1,0 +1,18 @@
+mixin popmixin(type, prompt)
+  .popmodel(class=type)
+    .popbody
+      if type == "confirm"
+        .fontlayer
+          .prompt= prompt
+            .popline
+        .colorbar
+        .popbutton
+          a.button_blue 确定
+          a.button_blue.ml40 取消
+      else
+        .fontlayer
+          .cell
+            .middle
+              .prompt= prompt
+                .popline
+        .colorbar

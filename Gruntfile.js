@@ -16,7 +16,11 @@ module.exports = function(grunt) {
     banner: '/*!' + banner + '\n' +
         '* <%= pkg.name %> - v<%= pkg.version %> -\n' +
         '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> */\n'
+        '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> */\n',
+    dist: 'dist', // <%= dist %>
+    src: 'src',   // <%= src %>
+    js: 'Domy',   // JS合并后默认名称
+    css: 'style'  // CSS默认名称
   };
   grunt.util._.extend(config, loadConfig('./tasks/options/'));
   grunt.initConfig(config);
@@ -27,7 +31,46 @@ module.exports = function(grunt) {
   // load all grunt custom tasks
   grunt.loadTasks('tasks');
 
-  grunt.registerTask('default', ['jshint:with_overrides', 'clean:build', 'copy', 'concat', 'uglify:buildall', 'less:production', 'jade:release', 'imagemin:dynamic', 'watch']);
+  grunt.registerTask('default', [
+    'jshint',
+    'clean',
+    'copy:base',
+    'copy:sea',
+    'copy:sealab',
+    'copy:model',
+    'copy:images',
+    'copy:app',
+    'copy:api',
+    //'concat',
+    'less:development',
+    'jade:default',
+    'jade:model',
+    'imagemin',
+    // 'configureProxies:server',
+    'connect',
+    // 'open:google',
+    'watch:development'
+  ]);
+
+  grunt.registerTask('product', [
+    'jshint',
+    'clean',
+    'copy:base',
+    'copy:sea',
+    'copy:sealab',
+    'copy:model',
+    'copy:images',
+    'copy:app',
+    'copy:api',
+    //'concat',
+    'uglify:production',
+    'less:production',
+    'jade:default',
+    'jade:model',
+    'imagemin',
+    'connect',
+    'watch:production'
+  ]);
 };
 
 function loadConfig(configPath) {

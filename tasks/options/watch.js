@@ -1,6 +1,55 @@
 module.exports = exports = {
-  src: {
-    files: ['src/js/*.js', 'src/less/*.less', 'src/jade/**', 'tasks/options/*.js'],
-    tasks: ['jshint:with_overrides', 'clean:build', 'copy', 'concat', 'uglify:buildall', 'less:production', 'jade:release', 'imagemin:dynamic']
+  options: {
+    livereload : true
+  },
+  development: {
+    files: [
+      '<%= src %>/app/*.js',
+      '<%= src %>/base/**',
+      '<%= src %>/model/**',
+      '<%= src %>/**/*.less',
+      '<%= src %>/jade/**',
+      'tasks/options/*.js'
+    ],
+    tasks: [
+      'jshint',
+      'clean',
+      'copy:base',
+      'copy:sea',
+      'copy:sealab',
+      'copy:model',
+      'copy:images',
+      'copy:app',
+      'copy:api',
+      //'concat',
+      'less:development',
+      'jade:default',
+      'jade:model',
+      'imagemin'
+    ]
+  },
+  production: {
+    files: [
+      'src/**/*.js',
+      'src/**/*.less',
+      'src/jade/**',
+      'tasks/options/*.js'
+    ],
+    tasks: [
+      'jshint',
+      'clean',
+      'copy:base',
+      'copy:sea',
+      'copy:sealab',
+      'copy:model',
+      'copy:images',
+      'copy:app',
+      'copy:api',
+      //'concat',
+      'uglify:production',
+      'less:production',
+      'jade',
+      'imagemin'
+    ]
   }
 };

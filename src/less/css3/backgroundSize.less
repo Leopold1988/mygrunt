@@ -1,0 +1,15 @@
+.backgroundSize (@size) {
+  background-size:@size;
+	-moz-background-size:@size;
+	-webkit-background-size:@size;
+	-o-background-size:@size;
+	-ms-background-size:@size;
+}
+
+// background-size: auto || <length> || <percentage> || cover || contain
+
+// 1、auto:此值为默认值，保持背景图片的原始高度和宽度；
+// 2、<length>此值设置具体的值，可以改变背景图片的大小，40px 40px；
+// 3、<percentage>此值为百分值，可以是0％〜100％之间任何值，但此值只能应用在块元素上，所设置百分值将使用背景图片大小根据所在元素的宽度的百分比来计算。
+// 4、cover：此值是将图片放大，以适合铺满整个容器，这个主要运用在，当图片小于容器时，又无法使用background-repeat来实现时，我们就可以采用cover;将背景图片放大到适合容器的大小，但这种方法会使用背景图片失真；
+// 5、contain:此值刚好与cover相反，其主要是将背景图片缩小，以适合铺满整个容器，这个主要运用在，当背景图片大于元素容器时，而又需要将背景图片全部显示出来，此时我们就可以使用contain将图片缩小到适合容器大小为止，这种方法同样会使用图片失真。

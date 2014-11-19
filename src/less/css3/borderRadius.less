@@ -1,0 +1,27 @@
+.radius(@num){
+  border-radius:@num;
+	-webkit-border-radius:@num;
+	-moz-border-radius:@num;
+	-o-border-radius:@num;
+	-ms-border-radius:@num;
+}
+
+// border-radius: 10px; 等值圆角
+// top-left、top-right、bottom-right、bottom-left四个值相等
+
+// border-radius: 10px 20px; 对角等值圆角
+// 那么top-left等于bottom-right，并且取第一个值；top-right等于bottom-left，并且取第二个值
+
+// border-radius:10px 20px 30px;
+// 如果有三个值，其中第一个值是设置top-left;而第二个值是top-right和bottom-left并且他们会相等,第三个值是设置bottom-right
+
+// border-radius:10px 20px 30px 40px;
+// 如果有四个值，其中第一个值是设置top-left;而第二个值是top-right,第三个值bottom-right,第四个值是设置bottom-left
+
+// border-radius: 10px / 20px;
+// 等价于:
+// border-top-left-radius: 10px 20px;
+// border-top-right-radius: 10px 20px;
+// border-bottom-right-radius: 10px 20px;
+// border-bottom-left-radius: 10px 20px;
+// border-top-left-radius等 接受2个值,第一个值是圆角水平半径，第二个值是垂直半径,如果第二个值省略，那么其等于第一个值
