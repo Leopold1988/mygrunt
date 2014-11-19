@@ -3153,15 +3153,33 @@ $(function(){
 /* 弹出层相关变量 */
 .popmodel {
   text-align: center;
-  background-color: #e0f3ff;
   width: 490px;
   height: 260px;
+  position: relative;
+}
+.popmodel .poptitle {
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+  position: relative;
+  bottom: 4px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #008bca;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -o-border-radius: 5px;
   -ms-border-radius: 5px;
-  position: relative;
+}
+.popmodel .popbody {
+  height: 100%;
+  background-color: #e0f3ff;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
 }
 .popmodel .fontlayer {
   width: 100%;
@@ -3225,6 +3243,13 @@ $(function(){
   width: 100%;
   *position: relative;
   *top: -50%;
+}
+.popbox {
+  height: auto;
+}
+.popbox .popbody {
+  min-height: 344px;
+  padding-bottom: 40px;
 }
 .bbbox {
   display: none;

@@ -15,11 +15,26 @@
 
 .popmodel{
   text-align: center;
-  background-color: @popbgc;
   width: 490px;
   height: 260px;
-  .radius(@popradius);
   position: relative;
+  .poptitle{
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    position: relative;
+    bottom: 4px;
+    text-align: center;
+    color: @poptitlefc;
+    background-color: @poptitlebgc;
+    .radius(@popradius);
+  }
+
+  .popbody{
+    height: 100%;
+    background-color: @popbgc;
+    .radius(@popradius);
+  }
 
   .fontlayer{
     width: 100%;
@@ -62,11 +77,21 @@
   }
 }
 
+// 提示框特别样式
 .alert{
   .fontlayer{
     height: 100%;
     padding: 0;
     line-height: inherit;
     .valign-middle();
+  }
+}
+
+// 弹出层特别样式
+.popbox{
+  height: auto;
+  .popbody{
+    min-height: 344px;
+    padding-bottom: 40px;
   }
 }

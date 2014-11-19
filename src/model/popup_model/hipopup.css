@@ -16,15 +16,6 @@
   border-radius: 8px;
 }
 
-/* 盒子外层标题样式 */
-.hipopupbox .poptitle{
-  position: relative;
-  text-align: center;
-  padding: 10px;
-  color: #fff;
-  background-color: #008bca;
-}
-
 /* 盒子内容层样式 */
 .hipopupbox .inner{
   min-width : 100px;
@@ -44,11 +35,6 @@
   top: 8px;
   right: 8px;
   z-index: 3;
-}
-
-.hipopupbox .poptitle a.close{
-  top: 50%;
-  margin-top: -10px;
 }
 
 .hipopupbox a.close:hover{

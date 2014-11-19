@@ -309,8 +309,8 @@ $("#ajax").hipopup({
 
 	$.fn.hipopup.bgdefault = {
 		display : "none",
-		background : "#1e3240",
-		opacity : ".5",
+		background : "#000000",
+		opacity : ".7",
 		position : "absolute",
 		left : 0,
 		top : 0,
